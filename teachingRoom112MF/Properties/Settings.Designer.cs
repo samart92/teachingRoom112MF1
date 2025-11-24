@@ -26,7 +26,8 @@ namespace teachingRoom112MF.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;uid=root; database=teachingroom112mf2025")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;uid=root; database=teachingroom112mf2025;convert zero datetime=t" +
+            "rue")]
         public string MySQLConnction {
             get {
                 return ((string)(this["MySQLConnction"]));

@@ -40,7 +40,7 @@ namespace teachingRoom112MF
             //connection string
 
             MySqlConnection conn = new MySqlConnection(Properties.Settings.Default.MySQLConnction);
-            string sql = "insert ...";
+            string sql = "";
             MySqlCommand cm = new MySqlCommand(sql, conn);
             conn.Open();
             cm.ExecuteNonQuery();
@@ -50,5 +50,8 @@ namespace teachingRoom112MF
 
 
         }
+
+
+        
     }
 }
