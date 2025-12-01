@@ -24,7 +24,7 @@ namespace teachingRoom112MF.allClass
 
 
 
-        public void Insert(int catagoryID, string sku, string productName, double price, double taxRate, bool status) {
+        public void Insert(int catagoryID, string sku, string productName, double price, double taxRate, int status) {
             string sql = $"INSERT INTO `tbproducts`( `categoryID`, `sku`, `name`, `price`, `taxRate`, `isActive`, `CreateAt`) VALUES ('{catagoryID}','{sku}','{productName}','{price}','{taxRate}','{status}','{DateTime.Today.ToString("yyyy/MM/dd")}')";
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             cnn.Open();
@@ -40,9 +40,9 @@ namespace teachingRoom112MF.allClass
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
-        public void Update(int catagoryID, string sku, string productName, double price, double taxRate, bool status)
+        public void Update(int catagoryID, string sku, string productName, double price, double taxRate, int status,int id)
         {
-            string sql = "";
+            string sql = $"UPDATE `tbproducts` SET `categoryID`='{catagoryID}',`sku`='{sku}',`name`='{productName}',`price`='{price}',`taxRate`='{taxRate}',`isActive`='{status}' WHERE id='{id}'";
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             cnn.Open();
             cmd.ExecuteNonQuery();

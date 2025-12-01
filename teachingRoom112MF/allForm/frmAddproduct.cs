@@ -23,8 +23,13 @@ namespace teachingRoom112MF.allForm
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //product.Insert(1, txtSKU.Text, txtProName.Text, Double.Parse(txtPrice.Text),double.Parse(txtTexRate.Text),true);
-            product.Delete(int.Parse(txtSKU.Text));
+            //product.Insert(1, txtSKU.Text, txtProName.Text, Double.Parse(txtPrice.Text),double.Parse(txtTexRate.Text),0);
+            //product.Delete(int.Parse(txtSKU.Text));
+            product.Update(1, txtSKU.Text, txtProName.Text, double.Parse(txtPrice.Text), double.Parse(txtTexRate.Text),Convert.ToInt16(ckbStatus.Checked), 7);
+
+            
+
+            
 
         }
     }
