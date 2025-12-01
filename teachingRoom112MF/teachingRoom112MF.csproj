@@ -262,6 +262,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="allClass\Products.cs" />
+    <Compile Include="allForm\frmAddproduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="allForm\frmAddproduct.Designer.cs">
+      <DependentUpon>frmAddproduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="allForm\frmAddUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +289,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="allForm\frmAddproduct.resx">
+      <DependentUpon>frmAddproduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="allForm\frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>
     </EmbeddedResource>

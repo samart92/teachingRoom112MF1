@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.btnExite = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExite = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.lblUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,66 +63,16 @@
             this.panel1.Size = new System.Drawing.Size(156, 538);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // button7
             // 
-            this.panel2.Controls.Add(this.btnExite);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(156, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 80);
-            this.panel2.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(156, 80);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 458);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(5, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(5, 263);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(5, 317);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 46);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(5, 371);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 46);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "User";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button7.FlatAppearance.BorderSize = 2;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(5, 479);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(147, 46);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -132,28 +85,49 @@
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // button5
             // 
-            this.button7.FlatAppearance.BorderSize = 2;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(5, 479);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(147, 46);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button5.FlatAppearance.BorderSize = 2;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(5, 371);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(147, 46);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "User";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // btnExite
+            // button4
             // 
-            this.btnExite.FlatAppearance.BorderSize = 0;
-            this.btnExite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExite.Image = global::teachingRoom112MF.Properties.Resources.icons8_exit_45;
-            this.btnExite.Location = new System.Drawing.Point(713, 12);
-            this.btnExite.Name = "btnExite";
-            this.btnExite.Size = new System.Drawing.Size(57, 53);
-            this.btnExite.TabIndex = 0;
-            this.btnExite.UseVisualStyleBackColor = true;
-            this.btnExite.Click += new System.EventHandler(this.btnExite_Click);
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(5, 317);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(147, 46);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(5, 263);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(147, 46);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(5, 209);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(147, 46);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -169,6 +143,52 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblUser);
+            this.panel2.Controls.Add(this.btnExite);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(156, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(782, 80);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnExite
+            // 
+            this.btnExite.FlatAppearance.BorderSize = 0;
+            this.btnExite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExite.Image = global::teachingRoom112MF.Properties.Resources.icons8_exit_45;
+            this.btnExite.Location = new System.Drawing.Point(713, 12);
+            this.btnExite.Name = "btnExite";
+            this.btnExite.Size = new System.Drawing.Size(57, 53);
+            this.btnExite.TabIndex = 0;
+            this.btnExite.UseVisualStyleBackColor = true;
+            this.btnExite.Click += new System.EventHandler(this.btnExite_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(156, 80);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 458);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel2;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // lblUser
+            // 
+            this.lblUser.Location = new System.Drawing.Point(546, 18);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(176, 41);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "User: chandaranita";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 29F);
@@ -178,6 +198,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Khmer OS Siemreap", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "frmMain";
             this.Text = "frmMain";
@@ -200,5 +221,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnExite;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        public System.Windows.Forms.Label lblUser;
     }
 }

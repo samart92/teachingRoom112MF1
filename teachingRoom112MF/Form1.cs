@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using teachingRoom112MF.allForm;
 
 
 namespace teachingRoom112MF
@@ -22,32 +23,23 @@ namespace teachingRoom112MF
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            ////allForm.frmMain fm = new allForm.frmMain();
-            ////fm.Show();
-            ////this.Hide();
-            ////
-            //SqlConnection conn = new SqlConnection(Properties.Settings.Default.Dbconncetion);             
-            //string sql = "INSERT INTO tbUser(FullName) VALUES('SAM ART')";
-            //SqlCommand cmd = new SqlCommand(sql, conn);            
-            //conn.Open();
-            //cmd.ExecuteNonQuery();
-            //conn.Close();
-
-
-
-
-            //connection string
-
-            MySqlConnection conn = new MySqlConnection(Properties.Settings.Default.MySQLConnction);
-            string sql = "";
-            MySqlCommand cm = new MySqlCommand(sql, conn);
+             MySqlConnection conn = new MySqlConnection(Properties.Settings.Default.MySQLConnction);
+            string sql = $"SELECT * FROM tbuser WHERE fullName='{txtUserName.Text}' AND pinCode='{txtPassword.Text}'";
+           MySqlCommand cm= new MySqlCommand(sql, conn);
             conn.Open();
-            cm.ExecuteNonQuery();
+            MySqlDataReader dr = cm.ExecuteReader();
+            if (dr.HasRows)
+            {
+               frmMain fm = new frmMain();
+                fm.lblUser.Text = txtUserName.Text;
+                fm.Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("No user found");
+            }
             conn.Close();
-
-
-
 
         }
 

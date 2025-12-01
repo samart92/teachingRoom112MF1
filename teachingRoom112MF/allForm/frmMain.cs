@@ -21,7 +21,9 @@ namespace teachingRoom112MF.allForm
         {
             Form1 fm = new Form1();
             fm.Show();
-            this.Close();    
+            this.Close();
+
+          
         }
     }
 }

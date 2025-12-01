@@ -17,7 +17,7 @@ namespace teachingRoom112MF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddUser());
+            Application.Run(new frmAddproduct());
         }
     }
 }
