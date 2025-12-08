@@ -50,7 +50,7 @@ namespace teachingRoom112MF.allClass
         }
         public void SelectAll( DataGridView dg)
         {
-            string sql = "";
+            string sql = "SELECT * FROM tbproducts";
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -60,9 +60,16 @@ namespace teachingRoom112MF.allClass
             dg.DataSource = dt;
 
         }
-        public void SelectByID()
+        public void SelectByID(DataGridView dg,string search)
         {
-
+            string sql = $"SELECT * FROM tbproducts WHERE name like '{search}%'";
+            MySqlCommand cmd = new MySqlCommand(sql, cnn);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            cnn.Open();
+            da.Fill(dt);
+            cnn.Close();
+            dg.DataSource = dt;
         }
     }
 }
