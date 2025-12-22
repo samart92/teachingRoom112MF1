@@ -71,5 +71,23 @@ namespace teachingRoom112MF.allClass
             cnn.Close();
             dg.DataSource = dt;
         }
+
+        public void SelectCatagory(ComboBox cobo)
+        {
+            string sql = "SELECT * FROM tbcategories";
+            MySqlCommand cmd = new MySqlCommand(sql, cnn);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            cnn.Open();
+            da.Fill(dt);
+            cnn.Close();
+            cobo.DataSource = dt;
+            cobo.DisplayMember = "category";
+            cobo.ValueMember = "id";
+           
+
+        }
+
+
     }
 }

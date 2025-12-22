@@ -24,7 +24,7 @@ namespace teachingRoom112MF.allForm
         private void button1_Click(object sender, EventArgs e)
         {
 
-            product.Insert(1, txtSKU.Text, txtProName.Text, Double.Parse(txtPrice.Text),double.Parse(txtTexRate.Text),0);
+            product.Insert(Convert.ToInt16( cbbCatagory.SelectedValue), txtSKU.Text, txtProName.Text, Double.Parse(txtPrice.Text), double.Parse(txtTexRate.Text), 0);
             //product.Delete(int.Parse(txtSKU.Text));
             //product.Update(1, txtSKU.Text, txtProName.Text, double.Parse(txtPrice.Text), double.Parse(txtTexRate.Text),Convert.ToInt16(ckbStatus.Checked), 7);
 
@@ -32,14 +32,20 @@ namespace teachingRoom112MF.allForm
             ClearAllText();
 
             
+            //MessageBox.Show(cbbCatagory.SelectedValue.ToString());
 
-            
+
+
+
+
+
 
         }
 
         private void frmAddproduct_Load(object sender, EventArgs e)
         {
             product.SelectAll(dataGridView1);
+            product.SelectCatagory(cbbCatagory);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

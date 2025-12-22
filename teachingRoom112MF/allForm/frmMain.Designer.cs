@@ -35,13 +35,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSelling = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExite = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lblUser = new System.Windows.Forms.Label();
+            this.btnExite = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnSelling);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -118,16 +118,65 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSelling
             // 
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(5, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSelling.FlatAppearance.BorderSize = 2;
+            this.btnSelling.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelling.Location = new System.Drawing.Point(5, 209);
+            this.btnSelling.Name = "btnSelling";
+            this.btnSelling.Size = new System.Drawing.Size(147, 46);
+            this.btnSelling.TabIndex = 1;
+            this.btnSelling.Text = "Selling";
+            this.btnSelling.UseVisualStyleBackColor = true;
+            this.btnSelling.Click += new System.EventHandler(this.btnSelling_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblUser);
+            this.panel2.Controls.Add(this.btnExite);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(156, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(782, 80);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // lblUser
+            // 
+            this.lblUser.Location = new System.Drawing.Point(546, 18);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(176, 41);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "User: chandaranita";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(156, 80);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 458);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panel2;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // btnExite
+            // 
+            this.btnExite.FlatAppearance.BorderSize = 0;
+            this.btnExite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExite.Image = global::teachingRoom112MF.Properties.Resources.icons8_exit_45;
+            this.btnExite.Location = new System.Drawing.Point(713, 12);
+            this.btnExite.Name = "btnExite";
+            this.btnExite.Size = new System.Drawing.Size(57, 53);
+            this.btnExite.TabIndex = 0;
+            this.btnExite.UseVisualStyleBackColor = true;
+            this.btnExite.Click += new System.EventHandler(this.btnExite_Click);
             // 
             // button1
             // 
@@ -142,52 +191,6 @@
             this.button1.Text = "Dash bord";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lblUser);
-            this.panel2.Controls.Add(this.btnExite);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(156, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 80);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnExite
-            // 
-            this.btnExite.FlatAppearance.BorderSize = 0;
-            this.btnExite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExite.Image = global::teachingRoom112MF.Properties.Resources.icons8_exit_45;
-            this.btnExite.Location = new System.Drawing.Point(713, 12);
-            this.btnExite.Name = "btnExite";
-            this.btnExite.Size = new System.Drawing.Size(57, 53);
-            this.btnExite.TabIndex = 0;
-            this.btnExite.UseVisualStyleBackColor = true;
-            this.btnExite.Click += new System.EventHandler(this.btnExite_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(156, 80);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(782, 458);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel2;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // lblUser
-            // 
-            this.lblUser.Location = new System.Drawing.Point(546, 18);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(176, 41);
-            this.lblUser.TabIndex = 1;
-            this.lblUser.Text = "User: chandaranita";
-            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmMain
             // 
@@ -218,7 +221,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSelling;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnExite;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
