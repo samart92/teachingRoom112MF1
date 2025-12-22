@@ -25,9 +25,12 @@ namespace teachingRoom112MF.controll
 
         private void lblText_Click(object sender, EventArgs e)
         {
-            frmMain frmMain = new frmMain();
-            frmMain.btnSelling_Click(sender, e);
-            frmMain.Show();
+
+            frmMain fmain = (frmMain)Application.OpenForms["frmMain"] ;
+            fmain.cID = ID;
+            fmain.flowLayoutPanel1.Controls.Clear();
+            fmain.btnSelling_Click(sender, e);            
+            fmain.Show();
 
         }
 

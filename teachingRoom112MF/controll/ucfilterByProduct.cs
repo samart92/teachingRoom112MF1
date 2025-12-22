@@ -13,14 +13,16 @@ namespace teachingRoom112MF.controll
 {
     public partial class ucfilterByProduct : UserControl
     {
-        public ucfilterByProduct()
+        string cID;
+        public ucfilterByProduct(string categoryID)
         {
             InitializeComponent();
+            cID = categoryID;
         }
 
         private void ucfilterByProduct_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("load");
+           
             GetallCatagory();
             GetallProduct();
 
@@ -28,9 +30,20 @@ namespace teachingRoom112MF.controll
 
         private void GetallProduct()
         {
+            string sql;
+            if (cID == null)
+            {
+                sql = "SELECT * FROM `tbproducts`";
+            }
+            else
+            {
+                sql = $"SELECT * FROM `tbproducts` WHERE `categoryID` = '{cID}'";
+            }
+           
+
+
             flowLayoutPanel2.Controls.Clear();
-            MySqlConnection cnn = new MySqlConnection(Properties.Settings.Default.MySQLConnction);
-            string sql = "SELECT * FROM `tbproducts`";
+            MySqlConnection cnn = new MySqlConnection(Properties.Settings.Default.MySQLConnction);            
             var com = new MySqlCommand(sql, cnn);
             cnn.Open();
             MySqlDataReader dr = com.ExecuteReader();
@@ -49,7 +62,7 @@ namespace teachingRoom112MF.controll
         {
             flowLayoutPanel1.Controls.Clear();
 
-            ucCatagoris btn = new ucCatagoris("All","1");
+            ucCatagoris btn = new ucCatagoris("All",null);
             flowLayoutPanel1.Controls.Add(btn);
 
             MySqlConnection cnn = new MySqlConnection(Properties.Settings.Default.MySQLConnction);

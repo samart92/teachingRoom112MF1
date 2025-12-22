@@ -13,8 +13,10 @@ using MySql.Data.MySqlClient;
 
 namespace teachingRoom112MF.allForm
 {
+    
     public partial class frmMain : Form
     {
+        public string cID = null;
         public frmMain()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace teachingRoom112MF.allForm
 
         public void btnSelling_Click(object sender, EventArgs e)
         {
-            ucfilterByProduct fpro = new ucfilterByProduct();
+            ucfilterByProduct fpro = new ucfilterByProduct(cID);
             flowLayoutPanel1.Controls.Add(fpro);
 
             

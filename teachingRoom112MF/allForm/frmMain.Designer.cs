@@ -36,12 +36,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnSelling = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnExite = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btnExite = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -130,6 +130,20 @@
             this.btnSelling.UseVisualStyleBackColor = true;
             this.btnSelling.Click += new System.EventHandler(this.btnSelling_Click);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::teachingRoom112MF.Properties.Resources.icons8_dashboard_43;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(5, 155);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 46);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Dash bord";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lblUser);
@@ -150,8 +164,21 @@
             this.lblUser.Text = "User: chandaranita";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnExite
+            // 
+            this.btnExite.FlatAppearance.BorderSize = 0;
+            this.btnExite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExite.Image = global::teachingRoom112MF.Properties.Resources.icons8_exit_45;
+            this.btnExite.Location = new System.Drawing.Point(713, 12);
+            this.btnExite.Name = "btnExite";
+            this.btnExite.Size = new System.Drawing.Size(57, 53);
+            this.btnExite.TabIndex = 0;
+            this.btnExite.UseVisualStyleBackColor = true;
+            this.btnExite.Click += new System.EventHandler(this.btnExite_Click);
+            // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(156, 80);
@@ -165,32 +192,6 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.panel2;
             this.bunifuDragControl1.Vertical = true;
-            // 
-            // btnExite
-            // 
-            this.btnExite.FlatAppearance.BorderSize = 0;
-            this.btnExite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExite.Image = global::teachingRoom112MF.Properties.Resources.icons8_exit_45;
-            this.btnExite.Location = new System.Drawing.Point(713, 12);
-            this.btnExite.Name = "btnExite";
-            this.btnExite.Size = new System.Drawing.Size(57, 53);
-            this.btnExite.TabIndex = 0;
-            this.btnExite.UseVisualStyleBackColor = true;
-            this.btnExite.Click += new System.EventHandler(this.btnExite_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::teachingRoom112MF.Properties.Resources.icons8_dashboard_43;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(5, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Dash bord";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -215,7 +216,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
@@ -226,5 +226,6 @@
         private System.Windows.Forms.Button btnExite;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         public System.Windows.Forms.Label lblUser;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
