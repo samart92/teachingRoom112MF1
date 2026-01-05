@@ -24,7 +24,7 @@ namespace teachingRoom112MF.controll
             lblPrices.Text = _price + " x " + count ;
 
             lblName.Text = name;
-            lblTotal.Text = (Double.Parse(_price) * count).ToString();
+            lblTotal.Text = (Double.Parse(_price) * count).ToString("F2");
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -40,14 +40,20 @@ namespace teachingRoom112MF.controll
         {
             count += 1;
             lblPrices.Text = _price + " x " + count;
-            lblTotal.Text = (Double.Parse(_price) * count).ToString();
+            lblTotal.Text = (Double.Parse(_price) * count).ToString("F2");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
+           
             count += -1;
+            if (count < 1)
+            {
+                btnClose_Click(sender, e);
+            }
             lblPrices.Text = _price + " x " + count;
-            lblTotal.Text = (Double.Parse(_price)*count).ToString();
+            lblTotal.Text = (Double.Parse(_price)*count).ToString("F2");
         }
     }
 }
