@@ -284,6 +284,12 @@
     <Compile Include="allForm\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="controll\cuSellingItemProdeuct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controll\cuSellingItemProdeuct.Designer.cs">
+      <DependentUpon>cuSellingItemProdeuct.cs</DependentUpon>
+    </Compile>
     <Compile Include="controll\ucCatagoris.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="allForm\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controll\cuSellingItemProdeuct.resx">
+      <DependentUpon>cuSellingItemProdeuct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controll\ucCatagoris.resx">
       <DependentUpon>ucCatagoris.cs</DependentUpon>

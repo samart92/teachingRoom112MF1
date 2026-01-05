@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using teachingRoom112MF.allForm;
 
 namespace teachingRoom112MF.controll
 {
@@ -31,7 +32,15 @@ namespace teachingRoom112MF.controll
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(lblProName.Text);
+
+            //frmMain fm = new frmMain();
+            frmMain fm = (frmMain) Application.OpenForms["frmMain"];
+            
+            cuSellingItemProdeuct pr = new cuSellingItemProdeuct(lblProName.Text, lblPrices.Text);
+           fm.flowLayoutPanel2.Controls.Add(pr);
+            fm.Show();
+
+            //MessageBox.Show(lblProName.Text);
 
         }
 

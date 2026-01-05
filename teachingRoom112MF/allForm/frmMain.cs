@@ -33,6 +33,7 @@ namespace teachingRoom112MF.allForm
 
         public void btnSelling_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel2.Visible = true;
             ucfilterByProduct fpro = new ucfilterByProduct(cID);
             flowLayoutPanel1.Controls.Add(fpro);
 
