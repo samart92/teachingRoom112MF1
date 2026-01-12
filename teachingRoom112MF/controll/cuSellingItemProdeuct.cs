@@ -17,6 +17,7 @@ namespace teachingRoom112MF.controll
     {
         int count = 1;
         string _price = "";
+         int proID = 0;
         public cuSellingItemProdeuct(string name, string price )
         {
             InitializeComponent();

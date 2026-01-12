@@ -121,10 +121,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblPrices;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblTotal;
+        public System.Windows.Forms.Label lblName;
+        public System.Windows.Forms.Label lblPrices;
     }
 }

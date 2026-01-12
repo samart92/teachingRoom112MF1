@@ -45,5 +45,23 @@ namespace teachingRoom112MF.allForm
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //
+            //------
+            //
+            foreach (cuSellingItemProdeuct selling in flowLayoutPanel2.Controls)
+            {
+                var a = selling.lblPrices.Text.Split('x');
+               
+                MessageBox.Show($"price: {a[0]} - Qn: {a[1]}- Total: ");
+
+                //insert dat to database
+                
+            }
+
+
+        }
     }
 }

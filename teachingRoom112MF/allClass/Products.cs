@@ -24,12 +24,13 @@ namespace teachingRoom112MF.allClass
 
 
 
-        public void Insert(int catagoryID, string sku, string productName, double price, double taxRate, int status) {
+        public void Insert(int catagoryID, string sku, string productName, double price, double taxRate, int status) {            
             string sql = $"INSERT INTO `tbproducts`( `categoryID`, `sku`, `name`, `price`, `taxRate`, `isActive`, `CreateAt`) VALUES ('{catagoryID}','{sku}','{productName}','{price}','{taxRate}','{status}','{DateTime.Today.ToString("yyyy/MM/dd")}')";
             MySqlCommand cmd = new MySqlCommand(sql, cnn);
             cnn.Open();
-            cmd.ExecuteNonQuery();
+           cmd.ExecuteNonQuery();
             cnn.Close();
+           
         
         }
         public void Delete(int id)
